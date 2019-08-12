@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Flag Popper</Name>
+  <Author>Andrew Morgan</Author>
+  <Version>1.0.02</Version>
+  <Active>False</Active>
+  <Type>System</Type>
+  <Description>Displays pop-up messages for flagged requests whenever they are: Checked in from the lender (Borrowing), checked in from the patron (Borrowing), marked found (Lending and Doc Del), or returned from the borrower (Lending). Refer to README.txt for configuration instructions.
+  </Description>
+  <Forms>
+    <Form />
+  </Forms>
+  <Permissions />
+  <Settings>
+    <Setting name="CustomFlags" value="Problem Requests ~ Problem request--check notes and follow up._choose | Call Number Error ~ There's a problem with this item's call number. Send to Cataloging for correction_remove |" type="string">
+      <Description>Determines the pop-up message for each flag, and whether to always keep, always remove, or give the option to keep or remove the flag. For flags not listed here, the name of the flag will be displayed on the pop-up message with the option to keep or remove it.
+	  </Description>
+    </Setting>
+    <Setting name="HiddenFlags" value="Request Sent - Shipped_remove | Needs E-Error Report_keep |" type="string">
+      <Description>Determines which flags shouldn't display any message and whether they should be kept or removed. This setting takes precedence over CustomFlags. 
+	  </Description>
+    </Setting>
+  </Settings>
+  <Files>
+    <File>Flag Popper.lua</File>
+  </Files>
+</Configuration>
